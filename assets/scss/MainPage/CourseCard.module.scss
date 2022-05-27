@@ -1,0 +1,120 @@
+.coursesBlock__card {
+  position: relative;
+  border: 1px solid #D7D7E7;
+  padding: 30px 25px;
+  width: 50%;
+
+  h2 {
+    margin-bottom: 32px;
+    line-height: 107%;
+    max-width: 331px;
+  }
+
+  .card__teachers {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    img {
+      position: relative;
+
+      &:first-child {
+        z-index: 3;
+      }
+
+      &:nth-child(2) {
+        z-index: 2;
+      }
+
+      &:nth-child(3) {
+        z-index: 1;
+      }
+
+      &:not(:last-child) {
+        margin-right: -18px;
+      }
+    }
+  }
+
+  .card__content {
+    padding: 0 13px;
+  }
+
+  .card__info {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 36px;
+
+    .info__item {
+      p {
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .details_btn {
+    margin-top: 3.125rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 1440px) {
+    padding: 25px 20px;
+
+    .card__teachers {
+      position: static;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      max-width: 314px;
+      padding-right: 0;
+    }
+  }
+
+  @media (max-width: 830px) {
+    .details-btn {
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 30px 10px 20px;
+
+    .card__content {
+      padding: 0 24px;
+    }
+    h2 {
+      max-width: 235px;
+      padding-right: 0;
+      margin-bottom: 23px;
+    }
+    .card__info {
+      grid-row-gap: 23px;
+
+      .info__item {
+        p {
+          &:not(:last-child) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .card__teachers {
+      display: none;
+    }
+    .details-btn {
+      margin-top: 33px;
+      justify-content: center;
+    }
+  }
+}

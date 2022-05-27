@@ -1,0 +1,50 @@
+.coursesBlock {
+  width: 100%;
+  margin-top: 167px;
+  padding-bottom: 111px;
+
+  h1 {
+    max-width: 600px;
+    margin-bottom: 28px;
+    letter-spacing: -0.04em;
+  }
+
+  p {
+    font-size: 30px;
+    line-height: 130%;
+    letter-spacing: -0.03em;
+  }
+
+  .cards_container {
+    margin-top: 60px;
+  }
+
+  @media (max-width: 1440px) {
+
+    p {
+      font-size: 25px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 71px;
+    padding-bottom: 57px;
+
+    .thin-container {
+      h1 {
+        margin-bottom: 20px;
+      }
+      p {
+        color: #9090A9;
+      }
+    }
+
+    &__cards-container {
+      margin-top: 33px;
+    }
+
+    p {
+      font-size: 19px;
+    }
+  }
+}

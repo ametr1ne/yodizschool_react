@@ -1,0 +1,253 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 34px 70px 0 60px;
+  z-index: 5;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 60px;
+
+    svg {
+      width: 82px;
+      height: 62px;
+      fill: #000000;
+      transition: fill 0.2s linear;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__link {
+    font-size: 19px;
+    margin-right: 50px;
+    transition: color 0.2s linear;
+    color: #000;
+
+    &:hover {
+      color: #f00;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      background: #000;
+    }
+
+    &[href="https://yodiz.ru"] {
+      @media (min-width: 1051px) {
+        margin-right: 0;
+        padding: 13px 30px 14px 30px;
+        background: #f8f8f8;
+        border-radius: 27px;
+      }
+    }
+  }
+
+  &__right {
+    display: block;
+    width: auto;
+  }
+
+  &__info {
+    display: block;
+    color: #fff;
+    font-size: 19px;
+
+    a {
+      color: #000;
+      transition: color 0.2s linear;
+
+      &:hover {
+        color: #f00;
+      }
+    }
+
+    span {
+      color: #000000;
+    }
+  }
+
+  &__mobile_info {
+    display: none;
+  }
+
+  @media (max-width: 1480px) {
+    padding: 20px 20px 0;
+
+    &__logo {
+      margin-right: 40px;
+
+      svg {
+        width: 64px;
+        height: 48px;
+      }
+    }
+
+    &__link {
+      margin-right: 40px;
+    }
+
+  }
+
+  @media (max-width: 1200px) {
+
+    &__logo {
+      margin-right: 0;
+    }
+
+    &__mobile_info {
+      display: block;
+      position: absolute;
+      left: 60px;
+      bottom: 52px;
+    }
+
+    &__menu {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 530px;
+      height: 100vh;
+      background: #fff;
+      z-index: 9;
+      padding: 86px 57px 130px;
+      transition: 0.5s ease-out;
+    }
+
+    &__menu.opened {
+      right: 0;
+    }
+
+    &__right {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &__line {
+      display: block;
+      position: absolute;
+      width: 2px;
+      height: 36px;
+      background: #000;
+      border-radius: 2px;
+      transition: 0.25s linear;
+    }
+
+    &__burger {
+      display: block;
+      position: fixed;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      background: 0 0;
+      width: 27px;
+      height: 40px;
+      top: 24px;
+      right: 15px;
+      overflow: hidden;
+      margin-left: 20px;
+      z-index: 10;
+    }
+
+    .closed .header__line {
+      background: #000;
+    }
+
+    &__line_1 {
+      transform: rotate(45deg);
+      top: -4px;
+      left: 12px;
+    }
+
+    &__line_2 {
+      transform: rotate(45deg);
+      top: 8px;
+      left: 12px;
+    }
+
+    &__line_3 {
+      transform: rotate(-45deg);
+      top: 24px;
+      left: 40px;
+    }
+
+    &__link {
+      font: 600 45px/45px "Proxima Nova Sb", sans-serif;
+      letter-spacing: -0.03em;
+      color: #000;
+      margin-right: 0;
+      margin-bottom: 25px;
+    }
+
+    &__link:last-child {
+      margin-bottom: 0;
+    }
+
+    &__mobile_info {
+      display: block;
+      position: absolute;
+      left: 60px;
+      bottom: 52px;
+    }
+
+    &__mobile-info p {
+      display: block;
+      margin-bottom: 9px;
+    }
+
+    &__mobile-info p:last-child {
+      margin-bottom: 0;
+    }
+
+    &__info {
+      padding-right: 46px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+
+    &__info {
+      font-size: 16px;
+    }
+
+    &__btn {
+      top: 19px;
+    }
+
+    &__menu {
+      width: 100%;
+      padding-top: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__link {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 10px;
+    }
+
+    &__mobile-info {
+      left: 15px;
+      bottom: 30px;
+    }
+  }
+}
+
+
