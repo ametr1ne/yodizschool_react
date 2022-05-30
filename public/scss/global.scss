@@ -5,6 +5,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Proxima Nova Rg";
   src: url(../fonts/ProximaNova-Regular.woff2) format("woff2"), url(../fonts/ProximaNova-Regular.woff) format("woff");
@@ -42,12 +43,27 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 80px;
-  line-height: 85px;
+  line-height: 107%;
+  letter-spacing: -0.04em;
 }
 
 h2 {
-  font-size: 55px;
-  line-height: 65px;
+  font-size: 50px;
+  line-height: 107%;
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-size: 30px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 1440px) {
+    font-size: 25px;
+  }
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
 }
 
 .text-grey {
@@ -85,6 +101,7 @@ h2 {
   grid-column-gap: 30px;
 }
 
+
 .btn {
   display: flex;
   flex-wrap: wrap;
@@ -104,12 +121,17 @@ h2 {
   svg {
     margin-left: 50px;
   }
-  &:hover{
+
+  &:hover {
     background: #f00;
   }
 }
 
 @media (max-width: 1440px) {
+  h2 {
+    font-size: 45px;
+  }
+
   .thin-container {
     max-width: 728px;
   }
@@ -125,7 +147,29 @@ h2 {
   }
 }
 
+@media (max-width: 850px) {
+  .cards_container {
+    grid-row-gap: 20px;
+    flex-direction: column;
+    align-items: center;
+
+    &__card {
+      width: 100% !important;
+    }
+  }
+}
+
 @media (max-width: 767px) {
+  .btn {
+    justify-content: center;
+    height: 60px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 34px;
+  }
   .thin-container, .hide-container {
     max-width: 400px;
   }

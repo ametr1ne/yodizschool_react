@@ -2,11 +2,11 @@ import React from 'react';
 import styles from "../../public/scss/Components/BlackButton.module.scss";
 import Link from "next/link";
 
-const BlackButton = ({children, courseLink}) => {
+const BlackButton = ({children, courseLink, className}) => {
     return (
         <>
             <Link href={courseLink}>
-                <a className={styles.details_btn + " " + styles.black_btn + " btn"}>
+                <a className={"btn " + " " + styles.black_btn + " " + className}>
                     {children}
                     <svg width="22" height="12" viewBox="0 0 22 12" fill="none"
                          xmlns="http://www.w3.org/2000/svg">

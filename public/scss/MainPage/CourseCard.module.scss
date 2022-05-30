@@ -15,7 +15,7 @@
     top: 20px;
     right: 20px;
 
-    img {
+    .image {
       position: relative;
 
       &:first-child {
@@ -58,6 +58,10 @@
   @media (max-width: 1440px) {
     padding: 25px 20px;
 
+    p {
+      font-size: 25px;
+    }
+
     .card__teachers {
       position: static;
       display: flex;
@@ -77,11 +81,15 @@
 
     .card__content {
       padding: 0 24px;
+      margin-bottom: 33px;
     }
     h2 {
       max-width: 235px;
       padding-right: 0;
       margin-bottom: 23px;
+    }
+    p {
+      font-size: 19px;
     }
     .card__info {
       grid-row-gap: 23px;

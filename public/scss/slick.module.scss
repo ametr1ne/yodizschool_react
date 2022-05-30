@@ -1,0 +1,83 @@
+/* Slider */
+.slickSlider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: pan-y;
+
+  & .slickTrack, & .slickList {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slickList {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  .slickList:focus {
+    outline: none;
+  }
+  &.dragging {
+    cursor: hand;
+  }
+}
+
+.slickTrack {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  &:before, &:after {
+    display: table;
+    content: '';
+  }
+  &:after {
+    clear: both;
+  }
+  .slickLoading & {
+    visibility: hidden;
+  }
+}
+.slickSlide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  [dir='rtl'] & {
+    float: right;
+  }
+  img {
+    display: block;
+  }
+  &.slickLoading img {
+    display: none;
+  }
+  &.dragging img {
+    pointer-events: none;
+  }
+  .slickInitialized & {
+    display: block;
+  }
+  .slickLoading & {
+    visibility: hidden;
+  }
+  .slickVertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+.slickArrow.slickHidden {
+  display: none;
+}
+.slickTrack,
+.slickList {
+  perspective:2000px;
+  -webkit-perspective: 2000px;
+  -webkit-backface-visibility: hidden;
+}

@@ -1,0 +1,86 @@
+.feedbacksBlock {
+  margin-top: 101px;
+
+  h2 {
+    max-width: 568px;
+  }
+
+  &__top {
+    display: flex;
+    margin-top: 19px;
+    align-items: flex-start;
+
+    .feedback_subtitle {
+      margin-top: 15px;
+    }
+
+    .vk_block {
+      margin-left: 40px;
+      display: flex;
+      align-items: center;
+
+      .vk_btn {
+        background: black;
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        min-width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          g {
+            path {
+              transition: fill 0.4s;
+            }
+          }
+        }
+        &:hover {
+          svg {
+            g {
+              path {
+                &:first-child {
+                  fill: rgb(0, 119, 255);
+                }
+
+                &:last-child {
+                  fill: white;
+                }
+              }
+
+            }
+          }
+        }
+      }
+
+      div {
+        margin-left: 18px;
+      }
+
+      p {
+        font-size: 19px;
+        white-space: nowrap;
+      }
+
+      a {
+        color: black;
+        transition: color 0.4s;
+
+        &:hover {
+          color: #ff0000;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    h2 {
+      max-width: 290px;
+    }
+    margin-top: 51px;
+    &__top {
+      display: none;
+    }
+  }
+}

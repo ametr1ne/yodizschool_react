@@ -1,0 +1,92 @@
+.interactiveBlock {
+  margin-top: 130px;
+  margin-bottom: 111px;
+
+  .interactiveItem {
+    width: 50%;
+    padding: 0 24px 30px;
+    position: relative;
+
+    .itemCategory {
+      position: absolute;
+      margin-top: 24px;
+      margin-left: 14px;
+      font-size: 19px;
+    }
+
+    .imgContainer {
+      margin: 0 auto;
+      height: 453px;
+      max-width: 500px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 100%;
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+
+  h3 {
+    margin-left: 14px;
+    font-size: 30px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    max-width: 415px;
+  }
+
+  .bookCard {
+    background: #D8D7D4;
+  }
+
+  .testCard {
+    border: 1px solid #D7D7E7;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 71px;
+    margin-bottom: 57px;
+
+    .interactiveItem {
+      width: 100%;
+      padding: 30px 10px 20px;
+      display: flex;
+      flex-direction: column;
+
+      .itemCategory {
+        display: none;
+      }
+
+      h3 {
+        order: 1;
+        font-size: 19px;
+        margin-left: 24px;
+      }
+      .imgContainer {
+        order: 2;
+        height: min-content;
+        margin-top: 14px;
+        margin-left: 13px;
+        margin-right: 13px;
+      }
+      .interactiveBtn {
+        margin-top: 20px;
+        justify-content: center;
+        order: 3;
+      }
+    }
+
+    .testCard {
+      .imgContainer {
+        margin-top: 38px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .interactiveBtn {
+        margin-top: 60px;
+      }
+    }
+  }
+}

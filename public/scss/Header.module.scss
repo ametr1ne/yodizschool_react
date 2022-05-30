@@ -222,16 +222,25 @@
   }
 
   @media (max-width: 767px) {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
+    padding: 12px 12px 0;
 
     &__info {
       font-size: 16px;
     }
 
+    &__burger {
+      top: 12px;
+    }
+
     &__btn {
       top: 19px;
+    }
+
+    &__logo {
+      svg {
+        height: 35px;
+        width: 46px;
+      }
     }
 
     &__menu {

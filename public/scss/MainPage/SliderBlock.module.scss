@@ -1,0 +1,220 @@
+.sliderBlock__review {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.reviewSlider__control {
+  max-width: 652px;
+  margin: 19px auto 0 auto;
+  .slickCurrent {
+    transform: scale(1);
+    border-color: #fff;
+    opacity: 1;
+  }
+  .slickCenter {
+    transform: scale(1);
+    border-color: #fff;
+    opacity: 1;
+  }
+  .slickActive {
+    transform: scale(1);
+    border-color: #fff;
+    opacity: 1;
+  }
+}
+.reviewSlider__controlItem {
+  display: block !important;
+  width: 88px !important;
+  height: 88px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transform: scale(0.67);
+  margin: 0 19px;
+  opacity: 1;
+  transition: 0.3s ease;
+  &:not(.slickActive) {
+    cursor: pointer;
+  }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+  }
+  .progress {
+    opacity: 0;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    .circle {
+      fill: none;
+      stroke-width: 1.2px;
+      stroke: #ff0000;
+    }
+  }
+}
+.reviewSlider__content {
+  max-width: 1320px;
+  margin-top: 49px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reviewSlider__content-item {
+  display: block;
+  width: 418px;
+  margin-left: 15px;
+  margin-right: 15px;
+  cursor: grab;
+  padding-bottom: 20px;
+}
+.reviewSlider__contentItem.active {
+  display: block;
+}
+.reviewSlider__contentText {
+  display: block;
+  margin-bottom: 19px;
+  font-size: 30px;
+  line-height: 130%;
+  letter-spacing: -.03em;
+}
+.slickSlide {
+  &:focus {
+    outline: none;
+  }
+}
+.slickDots {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    &:before {
+      display: none;
+    }
+    button {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border: 3px solid #333;
+      border-radius: 50%;
+      transition: background-color 0.4s, border-color 0.4s;
+    }
+  }
+  li.slickActive {
+    button {
+      background-color: #666;
+      border-color: #666;
+    }
+  }
+}
+.sliderBlock__slideWrap {
+  display: block;
+  background: #fff;
+  position: relative;
+  border: 1px solid #D7D7E7;
+  top: 30px;
+  padding: 16px 28px;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: -16px;
+    left: -1px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1px 1px 16px 16px;
+    border-color: transparent transparent transparent #D7D7E7;
+    z-index: 0;
+    transition: 0.3s linear;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    bottom: -14px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1px 1px 16px 16px;
+    border-color: transparent transparent transparent #fff;
+    z-index: 1;
+    transition: 0.3s linear;
+  }
+}
+.sliderBlock__slideWrap.active {
+  background: #fff !important;
+  top: 0;
+}
+.review-slider__content-name {
+  font-family: 'Proxima Nova Sb', sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 130%;
+}
+.sliderBlock__txt {
+  font-size: 19px;
+  line-height: 130%;
+}
+@media (max-width: 1440px) {
+  .review-slider__content {
+    margin-top: 38px;
+  }
+  .review-slider__content-text {
+    font-size: 25px;
+    line-height: 130%;
+  }
+  .review-slider__control {
+    margin: 6px auto 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .sliderBlock__review {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .review-slider__control {
+    max-width: 355px;
+  }
+  .review-slider__control-item {
+    height: 57px;
+    width: 57px !important;
+    margin: 0 5px;
+  }
+  .review-slider__content-item {
+    width: 290px;
+  }
+  .review-slider__content {
+    margin-top: 22px;
+    width: 100%;
+  }
+  .review-slider__content-text {
+    font-size: 19px;
+    margin-bottom: 16px;
+  }
+  .review-slider__content-name, .sliderBlock__txt {
+    font-size: 16px;
+    line-height: 130%;
+  }
+  .sliderBlock__slide-wrap {
+    padding: 21px 25px;
+  }
+}

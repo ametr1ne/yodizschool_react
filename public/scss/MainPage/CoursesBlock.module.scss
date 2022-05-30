@@ -27,26 +27,25 @@
   }
 
   @media (max-width: 1260px) {
-    &__cards-container {
+    .cards-container {
       flex-direction: column;
       grid-row-gap: 30px;
     }
   }
 
   @media (max-width: 767px) {
-    margin-top: 71px;
+    margin-top: 24px;
     padding-bottom: 57px;
 
-    .thin-container {
-      h1 {
-        margin-bottom: 20px;
-      }
-      p {
-        color: #9090A9;
-      }
+    h1 {
+      margin-bottom: 20px;
     }
 
-    &__cards_container {
+    .subtitle {
+      color: #9090a9;
+    }
+
+    .cards_container {
       margin-top: 33px;
     }
 

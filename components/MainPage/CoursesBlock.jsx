@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from '../../public/scss/MainPage/CoursesBlock.module.scss'
 import CourseCard from "./CourseCard";
+import dima_round from '../../public/img/dima_little.png'
+import lika_round from '../../public/img/lika_little.png'
+import lesha_round from '../../public/img/lecha_little.png'
 
 const CoursesBlock = () => {
     return (
@@ -8,7 +11,7 @@ const CoursesBlock = () => {
             <div className="thin-container">
                 <h1>Yodiz School —
                     digital education</h1>
-                <p>Образовательные онлайн-курсы по моушн и веб-дизайну</p>
+                <p className={styles.subtitle}>Образовательные онлайн-курсы по моушн и веб-дизайну</p>
             </div>
             <div className="hide-container">
                 <div className={styles.cards_container + " cards_container"}>
@@ -19,6 +22,7 @@ const CoursesBlock = () => {
                         startTime={'11 мая, 20:00 мск'}
                         duration={'5 дней'}
                         price={'Бесплатно'}
+                        icons={[dima_round]}
                     />
 
                     <CourseCard
@@ -27,6 +31,7 @@ const CoursesBlock = () => {
                         startTime={'30 мая, 20:00 мск'}
                         duration={'4 месяца'}
                         price={'от 7 990 руб.'}
+                        icons={[dima_round, lika_round, lesha_round]}
                     />
 
                     {/*<div className="coursesBlock__card cards-container__card">*/}
