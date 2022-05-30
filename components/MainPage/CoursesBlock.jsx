@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../assets/scss/MainPage/CoursesBlock.module.scss'
+import styles from '../../public/scss/MainPage/CoursesBlock.module.scss'
 import CourseCard from "./CourseCard";
 
 const CoursesBlock = () => {
@@ -11,11 +11,11 @@ const CoursesBlock = () => {
                 <p>Образовательные онлайн-курсы по моушн и веб-дизайну</p>
             </div>
             <div className="hide-container">
-                <div className={styles.cards_container + " cards-container"}>
+                <div className={styles.cards_container + " cards_container"}>
 
                     <CourseCard
                         courseName={'Веб-дизайн, быстрый старт'}
-                        courseLink={'https://yodizschool.ru/freeonline'}
+                        courseLink={'/faststart'}
                         startTime={'11 мая, 20:00 мск'}
                         duration={'5 дней'}
                         price={'Бесплатно'}
@@ -23,7 +23,7 @@ const CoursesBlock = () => {
 
                     <CourseCard
                         courseName={'Профессия веб-дизайнер'}
-                        courseLink={'https://yodizschool.ru/online'}
+                        courseLink={'/designer'}
                         startTime={'30 мая, 20:00 мск'}
                         duration={'4 месяца'}
                         price={'от 7 990 руб.'}

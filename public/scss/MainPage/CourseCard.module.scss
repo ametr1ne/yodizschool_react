@@ -7,7 +7,7 @@
   h2 {
     margin-bottom: 32px;
     line-height: 107%;
-    max-width: 331px;
+    max-width: 380px;
   }
 
   .card__teachers {
@@ -38,6 +38,7 @@
 
   .card__content {
     padding: 0 13px;
+    margin-bottom: 3.125rem;
   }
 
   .card__info {
@@ -54,14 +55,6 @@
     }
   }
 
-  .details_btn {
-    margin-top: 3.125rem;
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
   @media (max-width: 1440px) {
     padding: 25px 20px;
 
@@ -75,14 +68,6 @@
     h2 {
       max-width: 314px;
       padding-right: 0;
-    }
-  }
-
-  @media (max-width: 830px) {
-    .details-btn {
-      svg {
-        display: none;
-      }
     }
   }
 
@@ -112,7 +97,7 @@
     .card__teachers {
       display: none;
     }
-    .details-btn {
+    .details_btn {
       margin-top: 33px;
       justify-content: center;
     }

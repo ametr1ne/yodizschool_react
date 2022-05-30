@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 34px 70px 0 60px;
+  padding: 30px 50px 0;
   z-index: 5;
   justify-content: space-between;
 
@@ -27,6 +27,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+  }
+
+  &__burger {
+    display: none;
   }
 
   &__link {

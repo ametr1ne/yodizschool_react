@@ -1,6 +1,6 @@
 .coursesBlock {
   width: 100%;
-  margin-top: 167px;
+  margin-top: 75px;
   padding-bottom: 111px;
 
   h1 {
@@ -26,6 +26,13 @@
     }
   }
 
+  @media (max-width: 1260px) {
+    &__cards-container {
+      flex-direction: column;
+      grid-row-gap: 30px;
+    }
+  }
+
   @media (max-width: 767px) {
     margin-top: 71px;
     padding-bottom: 57px;
@@ -39,7 +46,7 @@
       }
     }
 
-    &__cards-container {
+    &__cards_container {
       margin-top: 33px;
     }
 

@@ -5,19 +5,19 @@ import Footer from "./Footer";
 
 const MainContainer = ({children, title, keywords}) => {
     return (
-        <div>
+        <>
             <Head>
                 <title>{title}</title>
                 <meta keywords={keywords}></meta>
-                <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.svg"/>
+                <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.svg"/>
             </Head>
 
             <Header/>
 
-            <div>{children}</div>
+            <main>{children}</main>
 
             <Footer/>
-        </div>
+        </>
     );
 };
 
